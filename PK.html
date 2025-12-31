@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>App Splash</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#7c1b7c;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* Splash container */
+.splash{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#fff;
+    transition:opacity 1s ease;
+}
+
+/* Fade out class */
+.splash.fade-out{
+    opacity:0;
+}
+
+/* Square box */
+.logo-box{
+    width:120px;
+    height:120px;
+    background:#ffffff;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* R letter */
+.logo{
+    font-size:64px;
+    font-weight:bold;
+    color:#5f259f;
+    animation:riseUp 2.5s ease-out forwards;
+}
+
+/* One-direction upward animation */
+@keyframes riseUp{
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-10px);
+        opacity:1;
+    }
+}
+
+/* Loading text */
+.loading{
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+/* Dots animation */
+.dots::after{
+    content:'';
+    animation:dots 1.5s steps(3,end) infinite;
+}
+
+@keyframes dots{
+    0%{content:'';}
+    33%{content:'.';}
+    66%{content:'..';}
+    100%{content:'...';}
+}
+</style>
+</head>
+
+<body>
+
+<div class="splash" id="splash">
+    <div class="logo-box">
+        <div class="logo">R</div>
+    </div>
+
+    <div class="loading">
+        Loading<span class="dots"></span>
+    </div>
+</div>
+
+<script>
+    // Fade out after animation
+    setTimeout(()=>{
+        document.getElementById("splash").classList.add("fade-out");
+    },3000);
+
+    // Open home page after fade
+    setTimeout(()=>{
+        window.location.href="R.animation.html";
+    },4000);
+</script>
+
+</body>
+</html>

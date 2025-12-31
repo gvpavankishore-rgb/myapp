@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Skill</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg,#ff7e5f,#feb47b);
+    color:white;
+    padding:40px;
+}
+
+.box{
+    background: rgba(255,255,255,0.15);
+    padding:30px;
+    border-radius:15px;
+    max-width:600px;
+    margin:auto;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+a{
+    color:#fff;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:20px;
+    background:#000;
+    padding:10px 20px;
+    border-radius:20px;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h1>CSS Skill</h1>
+    <p>
+        CSS (Cascading Style Sheets) is used to style HTML elements. 
+        It controls layout, colors, fonts, animations, and responsiveness.
+    </p>
+
+    <h3>My CSS Knowledge</h3>
+    <ul>
+        <li>Flexbox & Grid Layout</li>
+        <li>Animations & Transitions</li>
+        <li>Responsive Design</li>
+        <li>Variables & Media Queries</li>
+    </ul>
+
+    <a href="R.animation.html">🔙Back to Home</a>
+</div>
+</body>
+</html>
